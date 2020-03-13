@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.2)
+project(ProtocolDriver_iRdopto_IM1253B)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_library(ProtocolDriver_iRdopto_IM1253B ProtocolDriver/iRdopto/IM1253B.cpp ProtocolDriver/iRdopto/IM1253B.hpp)
+
+add_executable(ProtocolDriver_iRdopto_IM1253B_Test test.cpp)
+target_link_libraries(ProtocolDriver_iRdopto_IM1253B_Test ProtocolDriver_iRdopto_IM1253B)
+
+add_executable(ProtocolDriver_iRdopto_IM1253B_Test2 test2.cpp)
+target_link_libraries(ProtocolDriver_iRdopto_IM1253B_Test2 ProtocolDriver_iRdopto_IM1253B)
